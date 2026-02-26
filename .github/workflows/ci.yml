@@ -41,7 +41,7 @@ jobs:
           retention-days: 7
 
       - name: Run Tests with Coverage
-       run: mvn verify
+        run: mvn verify
 
       - name: Upload Coverage Report
         uses: actions/upload-artifact@v4
