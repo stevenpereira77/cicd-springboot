@@ -39,3 +39,13 @@ jobs:
           name: test-reports
           path: target/surefire-reports/
           retention-days: 7
+
+      - name: Run Tests with Coverage
+       run: mvn verify
+
+      - name: Upload Coverage Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: target/site/jacoco/
+          retention-days: 7
